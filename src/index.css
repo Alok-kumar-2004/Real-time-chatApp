@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to new messages */
+.new-message {
+  animation: slideIn 0.3s ease forwards;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #4b5563;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #6366f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #818cf8;
+}
+
+[contenteditable][placeholder]:empty:before {
+  content: attr(placeholder);
+  color: #9CA3AF;
+  position: absolute;
+  pointer-events: none;
+}
